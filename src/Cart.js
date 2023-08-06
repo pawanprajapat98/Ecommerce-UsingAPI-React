@@ -4,17 +4,7 @@ import { globalstate } from './App'
 function Cart() {
   const{item} = useContext(globalstate)
 
-  function handalClick(e,index){
-    // console.log(Result)
-    
-   const element= [...item]
-   element.slice(index,1)
-   SettingsRemote(element)
-
-    // e.preventDefault()
-    
-   
-   }
+  
   return (
     <div>
       <div className='container1'>
@@ -30,7 +20,7 @@ function Cart() {
                 <p>{result.category}</p>
                 <p>${result.price}</p>
                 <input type="number" id="quantity" name="quantity" readOnly min="1" max="1" />
-                 <a href=" " className='delete-btn' onClick={(e)=>handalClick(e,index)}>Delete</a>
+                 <a href=" " className='delete-btn'>Delete</a>
                 </div>
             </div>
             )
